@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.graduationproject.schoolmapsystem.mapper.BuildingInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.graduationproject.schoolmapsystem.entity.BuildingInfo">
+        <id column="building_id" property="building_id" />
+        <result column="building_name" property="building_name" />
+        <result column="building_type" property="building_type" />
+        <result column="building_area" property="building_area" />
+        <result column="building_department" property="building_department" />
+        <result column="building_info" property="building_info" />
+        <result column="building_opentime" property="building_opentime" />
+        <result column="building_closingtime" property="building_closingtime" />
+        <result column="building_image" property="building_image" />
+    </resultMap>
+
+</mapper>

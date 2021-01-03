@@ -1,0 +1,62 @@
+spring:
+  datasource:
+    name: schoolMap
+    #使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      username: root
+      password: XiaoYQ,./;
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      # 初始化时建立物理连接的个数
+      initial-size: 4
+      # 最大连接池数量  ×2+1
+      max-active: 20
+      # 最小连接池数量
+      min-idle: 4
+      # 获取连接时最大等待时间ms
+      max-wait: 30000
+      # 用来检测连接是否有效的sql语句
+      validation-query: select 'x'
+      # 申请连接的时候检测，如果空闲时间大于timeBetweenEvictionRunsMillis，执行validationQuery检测连接是否有效
+      test-while-idle: true
+      # 申请连接时执行validationQuery检测连接是否有效
+      test-on-borrow: false
+      # 归还连接时执行validationQuery检测连接是否有效
+      test-on-return: false
+      # 1) Destroy线程会检测连接的间隔时间
+      # 2) testWhileIdle的判断依据
+      time-between-eviction-runs-millis: 60000
+      # 连接池中连接可空闲的时间
+      min-evictable-idle-time-millis: 300000
+      # 插件，监控统计用的:stat，防御sql注入的:wall
+      filters: stat,wall
+#mybatis-plus配置
+mybatis-plus:
+  #  xml扫描,多个目录用逗号或者分号分隔(告诉mapper所对应的xml文件位置)
+  mapper-locations: classpath*:mappers/*.xml
+  #  mybatis别名包扫描路径,通过该属性可以给包中的类注册别名
+  type-aliases-package: com.graduationproject.schoolmapsystem.entity
+  #  项目启动会检查xml配置存在(只在开发时候打开)
+  check-config-location: true
+  #  simple:该执行器类型不做特殊的事情,为每个语句的执行创建一个新的预处理语句,reuse:该执行器类型会复用预处理语句,batch:该执行器类型会批量执行所有的更新语句
+  executor-type: reuse
+  configuration:
+    #是否开启自动驼峰命名规则(camel case)映射,即从经典数据库列名A_COLUMN(下划线命名)到经典JAVA属性名aColumn(驼峰命名)的类似映射
+    map-underscore-to-camel-case: true
+    #    全局地开启或关闭配置文件中的所有映射器已经配置的任何缓存,默认为true
+    cache-enabled: false
+    #    如果查询结果中包含空值的列,则mybatis在映射的时候,不会映射这个字段
+    call-setters-on-nulls: true
+  global-config:
+    db-config:
+      #      表明下划线命名默认true
+      table-underline: true
+      #      id类型
+      id-type: auto
+logging:
+  level:
+    root: info
+    com:
+      jhcg:
+        crm:
+          mapper: debug

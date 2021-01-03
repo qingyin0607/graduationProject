@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.graduationproject.schoolmapsystem.mapper.DepartmentInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.graduationproject.schoolmapsystem.entity.DepartmentInfo">
+        <id column="d_id" property="d_id" />
+        <result column="d_infomation" property="d_infomation" />
+        <result column="d_name" property="d_name" />
+        <result column="d_communication" property="d_communication" />
+        <result column="d_image" property="d_image" />
+    </resultMap>
+
+</mapper>

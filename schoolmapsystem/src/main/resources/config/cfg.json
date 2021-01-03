@@ -1,0 +1,16 @@
+{
+  "author": "xiaoyiquan&panzhengyang",
+  "url": "jdbc:mysql://222.200.20.8:3306/school_map_system?useUnicode=true&characterEncoding=utf8&useSSL=false",
+  "username": "root",
+  "password": "XiaoYQ,./;",
+  "rootPath": "com.graduationproject.schoolmapsystem",
+  "driverName": "com.mysql.cj.jdbc.Driver",
+  "mapping": [
+    {
+      "moduleName": "",
+      "table": [
+
+      ]
+    }
+  ]
+}

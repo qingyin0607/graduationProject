@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.graduationproject.schoolmapsystem.mapper.UniversitiesInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.graduationproject.schoolmapsystem.entity.UniversitiesInfo">
+        <id column="universities_name" property="universities_name" />
+        <result column="universities_introduction" property="universities_introduction" />
+        <result column="universities_schoolmotto" property="universities_schoolmotto" />
+        <result column="universities_address" property="universities_address" />
+        <result column="universities_phone" property="universities_phone" />
+        <result column="universities_fax" property="universities_fax" />
+        <result column="universities_logo" property="universities_logo" />
+    </resultMap>
+
+</mapper>
