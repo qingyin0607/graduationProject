@@ -42,20 +42,20 @@ public class Result implements Serializable {
      * @param data 返回数据
      * @return Result
      */
-    public static com.graduationproject.schoolmapsystem.utils.Result success(Object data){
-        return new com.graduationproject.schoolmapsystem.utils.Result(true,0,"响应成功",data);
+    public static Result success(Object data){
+        return new Result(true,0,"响应成功",data);
     }
 
     /**
      * 响应成功
      * @return Result
      */
-    public static com.graduationproject.schoolmapsystem.utils.Result success(){
-        return new com.graduationproject.schoolmapsystem.utils.Result(true,0,"响应成功",null);
+    public static Result success(){
+        return new Result(true,0,"响应成功",null);
     }
 
-    public static com.graduationproject.schoolmapsystem.utils.Result success(Object data, long size, long total, long page){
-        return new com.graduationproject.schoolmapsystem.utils.Result(true,0,"响应成功",data,size,total,page);
+    public static Result success(Object data, long size, long total, long page){
+        return new Result(true,0,"响应成功",data,size,total,page);
     }
 
 
@@ -64,16 +64,16 @@ public class Result implements Serializable {
      * 响应错误(不带状态码,带消息)
      * @return Result
      */
-    public static com.graduationproject.schoolmapsystem.utils.Result error(String msg){
-        return new com.graduationproject.schoolmapsystem.utils.Result(false,1,msg,null);
+    public static Result error(String msg){
+        return new Result(false,1,msg,null);
     }
 
     /**
      * 响应错误(带错误码,消息提醒)
      * @return Result
      */
-    public static com.graduationproject.schoolmapsystem.utils.Result errorMsg(Integer code, String msg){
-        return new com.graduationproject.schoolmapsystem.utils.Result(false,code,msg,null);
+    public static Result errorMsg(Integer code, String msg){
+        return new Result(false,code,msg,null);
     }
 
     public Boolean getFlag() {

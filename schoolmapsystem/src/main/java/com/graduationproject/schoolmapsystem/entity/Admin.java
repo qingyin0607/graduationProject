@@ -65,4 +65,5 @@ public class Admin extends Model<Admin> {
         return this.admin_id;
     }
 
+
 }
